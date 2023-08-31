@@ -14,5 +14,89 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/contact-us', function() {
+    return "Ini halaman Contact Us.";
+});
+
+Route::get('/4-about-us', function() {
+    return "Ini halaman About Us.";
+});
+
+Route::get('/1-delivery', function() {
+    return "Ini halaman Delivery.";
+});
+
+Route::get('/guest-tracking', function() {
+    return "Ini halaman Guest Order Tracking.";
+});
+
+Route::get('/my-account', function() {
+    return "Ini halaman Sign In / Log In.";
+});
+
+Route::get('/5-secure-payment', function() {
+    return "Ini halaman Secure Payment.";
+});
+
+Route::get('/stores', function() {
+    return "Ini halaman Stores.";
+});
+
+Route::get('/sales/order/track', function() {
+    return "Ini halaman Lacak Pesanan.";
+});
+
+Route::get('/mitra10-catalog-product', function() {
+    return "Ini halaman Katalog Produk.";
+});
+
+Route::get('/customer/setting', function() {
+    return "Ini halaman Setting.";
+});
+
+Route::get('/registration', function() {
+    return "Ini halaman Create Account.";
+});
+
+Route::get('/customer/account', function() {
+    return "Ini halaman Dashboard Account.";
+});
+
+Route::get('/membership', function() {
+    return "Ini halaman Membership.";
+});
+
+Route::get('/whatsapp-stores', function() {
+    return "Ini halaman Whatsapp Stores.";
+});
+
+Route::get('/delivery', function() {
+    return "Ini halaman Delivery.";
+});
+
+Route::get('/delivery', function() {
+    return "Ini halaman Delivery.";
+});
+
+Route::get('/delivery', function() {
+    return "Ini halaman Delivery.";
+});
+
+Route::get('/delivery', function() {
+    return "Ini halaman Delivery.";
+});
+
+Route::get('/delivery', function() {
+    return "Ini halaman Delivery.";
+});
+
+Route::get('/delivery', function() {
+    return "Ini halaman Delivery.";
+});
+
+Route::get('/delivery', function() {
+    return "Ini halaman Delivery.";
 });
