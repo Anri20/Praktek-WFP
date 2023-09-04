@@ -73,30 +73,6 @@ Route::get('/whatsapp-stores', function() {
     return "Ini halaman Whatsapp Stores.";
 });
 
-Route::get('/delivery', function() {
-    return "Ini halaman Delivery.";
-});
-
-Route::get('/delivery', function() {
-    return "Ini halaman Delivery.";
-});
-
-Route::get('/delivery', function() {
-    return "Ini halaman Delivery.";
-});
-
-Route::get('/delivery', function() {
-    return "Ini halaman Delivery.";
-});
-
-Route::get('/delivery', function() {
-    return "Ini halaman Delivery.";
-});
-
-Route::get('/delivery', function() {
-    return "Ini halaman Delivery.";
-});
-
-Route::get('/delivery', function() {
-    return "Ini halaman Delivery.";
-});
+Route::get('/kategori/{code?}', function($code = 0) {
+    return view('listkategori', ['code'=> $code]);
+})->name('listkategori');

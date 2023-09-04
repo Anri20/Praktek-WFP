@@ -53,6 +53,9 @@
         <a href="whatsapp-stores">
             Whatsapp Stores
         </a>
+        <a href="{{route('listkategori')}}">
+            List Kategori
+        </a>
     </div>
 </body>
 
