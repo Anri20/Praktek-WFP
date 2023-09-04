@@ -73,6 +73,14 @@ Route::get('/whatsapp-stores', function() {
     return "Ini halaman Whatsapp Stores.";
 });
 
+Route::get('coba1/{test1}', function($test1){
+    return 'halaman coba 1 '. $test1;
+});
+
+Route::get('coba2/{test2?}', function($test2='halo'){
+    return 'halaman coba 2 '. $test2;
+});
+
 Route::get('/kategori/{code?}', function($code = 0) {
     return view('listkategori', ['code'=> $code]);
 })->name('listkategori');
