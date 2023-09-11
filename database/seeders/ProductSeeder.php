@@ -15,10 +15,12 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i <= 3; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             DB::table('products')->insert([
                 'nama_produk' => Str::random(10),
-                'harga_produk' => rand(10000, 50000),
+                'deskripsi' => Str::random(100),
+                'stok' => rand(0, 100),
+                'harga' => rand(10000, 100000),
                 'category_id' => 1,
             ]);
         }
