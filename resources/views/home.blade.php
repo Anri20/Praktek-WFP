@@ -56,6 +56,12 @@
         <a href="{{route('listkategori')}}">
             List Kategori
         </a>
+        <a href="{{route('productTable')}}">
+            Products Table
+        </a>
+        <a href="{{route('productGrid')}}">
+            Products Grid
+        </a>
     </div>
 </body>
 

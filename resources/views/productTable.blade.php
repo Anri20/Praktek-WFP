@@ -16,24 +16,32 @@
         <a href="{{ route('back') }}">
             Back
         </a>
-        <h2>Daftar Kategori</h2>
-        <p>Katgori dari seluruh produk yang ada</p>
+        <h2>Products</h2>
+        <p>These are the products that is available right now!!</p>
         <table class="table">
             <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Nama Produk</th>
+                    <th>Deskripsi</th>
+                    <th>Stock</th>
+                    <th>Harga</th>
                     <th>Kategori</th>
                     <th>Sub Kategori</th>
                     <th>Nama Kategori</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($categories as $k)
+                @foreach ($products as $p)
                     <tr>
-                        <td>{{ $k->id }}</td>
-                        <td>{{ $k->kategori }}</td>
-                        <td>{{ $k->sub_kategori }}</td>
-                        <td>{{ $k->nama_kategori }}</td>
+                        <td>{{ $p->id }}</td>
+                        <td>{{ $p->nama_produk }}</td>
+                        <td>{{ $p->deskripsi }}</td>
+                        <td>{{ $p->stok }}</td>
+                        <td>{{ $p->harga }}</td>
+                        <td>{{ $p->category->kategori }}</td>
+                        <td>{{ $p->category->sub_kategori }}</td>
+                        <td>{{ $p->category->nama_kategori }}</td>
                     </tr>
                 @endforeach
             </tbody>

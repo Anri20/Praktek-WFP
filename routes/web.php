@@ -15,72 +15,76 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name("back");
 
-Route::get('/contact-us', function() {
+Route::get('/contact-us', function () {
     return "Ini halaman Contact Us.";
 });
 
-Route::get('/4-about-us', function() {
+Route::get('/4-about-us', function () {
     return "Ini halaman About Us.";
 });
 
-Route::get('/1-delivery', function() {
+Route::get('/1-delivery', function () {
     return "Ini halaman Delivery.";
 });
 
-Route::get('/guest-tracking', function() {
+Route::get('/guest-tracking', function () {
     return "Ini halaman Guest Order Tracking.";
 });
 
-Route::get('/my-account', function() {
+Route::get('/my-account', function () {
     return "Ini halaman Sign In / Log In.";
 });
 
-Route::get('/5-secure-payment', function() {
+Route::get('/5-secure-payment', function () {
     return "Ini halaman Secure Payment.";
 });
 
-Route::get('/stores', function() {
+Route::get('/stores', function () {
     return "Ini halaman Stores.";
 });
 
-Route::get('/sales/order/track', function() {
+Route::get('/sales/order/track', function () {
     return "Ini halaman Lacak Pesanan.";
 });
 
-Route::get('/mitra10-catalog-product', function() {
+Route::get('/mitra10-catalog-product', function () {
     return "Ini halaman Katalog Produk.";
 });
 
-Route::get('/customer/setting', function() {
+Route::get('/customer/setting', function () {
     return "Ini halaman Setting.";
 });
 
-Route::get('/registration', function() {
+Route::get('/registration', function () {
     return "Ini halaman Create Account.";
 });
 
-Route::get('/customer/account', function() {
+Route::get('/customer/account', function () {
     return "Ini halaman Dashboard Account.";
 });
 
-Route::get('/membership', function() {
+Route::get('/membership', function () {
     return "Ini halaman Membership.";
 });
 
-Route::get('/whatsapp-stores', function() {
+Route::get('/whatsapp-stores', function () {
     return "Ini halaman Whatsapp Stores.";
 });
 
-Route::get('coba1/{test1}', function($test1){
-    return 'halaman coba 1 '. $test1;
+Route::get('coba1/{test1}', function ($test1) {
+    return 'halaman coba 1 ' . $test1;
 });
 
-Route::get('coba2/{test2?}', function($test2='halo'){
-    return 'halaman coba 2 '. $test2;
+Route::get('coba2/{test2?}', function ($test2 = 'halo') {
+    return 'halaman coba 2 ' . $test2;
 });
 
-Route::get('/kategori/{code?}', function($code = 0) {
-    return view('listkategori', ['code'=> $code]);
-})->name('listkategori');
+// Route::get('/kategori/{code?}', function ($code = 0) {
+//     return view('listkategori', ['code' => $code]);
+// })->name('listkategori');
+
+Route::get('/productTable', "ProductController@index")->name('productTable');
+Route::get('/productGrid', "ProductController@productGrid")->name('productGrid');
+Route::get('/listkategori', "CategoryController@index")->name('listkategori');
