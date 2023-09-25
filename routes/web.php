@@ -85,6 +85,11 @@ Route::get('coba2/{test2?}', function ($test2 = 'halo') {
 //     return view('listkategori', ['code' => $code]);
 // })->name('listkategori');
 
-Route::get('/productTable', "ProductController@index")->name('productTable');
-Route::get('/productGrid', "ProductController@productGrid")->name('productGrid');
-Route::get('/listkategori', "CategoryController@index")->name('listkategori');
+Route::resource('/kategori', "CategoryController");
+
+Route::get('/productTable', 'ProductController@productTable')->name('productTable');
+Route::get('/productTable/{productTable}', 'ProductController@productTableShow')->name('productTableShow');
+
+Route::get('/productGrid', 'ProductController@productGrid')->name('productGrid');
+Route::get('/productGrid/{productTable}', 'ProductController@productGridShow')->name('productGridShow');
+Route::get('/productGrid/withCategory/{category}', 'ProductController@productGridWithCategory')->name('productGridWithCategory');

@@ -53,13 +53,13 @@
         <a href="whatsapp-stores">
             Whatsapp Stores
         </a>
-        <a href="{{route('listkategori')}}">
+        <a href="{{ route('kategori.index') }}">
             List Kategori
         </a>
-        <a href="{{route('productTable')}}">
+        <a href="{{ route('productTable') }}">
             Products Table
         </a>
-        <a href="{{route('productGrid')}}">
+        <a href="{{ route('productGrid') }}">
             Products Grid
         </a>
     </div>

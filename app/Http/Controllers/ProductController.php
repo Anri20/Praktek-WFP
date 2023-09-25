@@ -14,16 +14,6 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-
-        return view("productTable", compact("products"));
-    }
-
-    public function productGrid()
-    {
-        $products = Product::all();
-
-        return view("productGrid", compact("products"));
     }
 
     /**
@@ -90,5 +80,46 @@ class ProductController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function productGrid()
+    {
+        $products = Product::all();
+
+        return view("ProductGrid.index", compact("products"));
+
+        // $products = Product::find(1);
+        // $category = $products->category;
+        // echo $products->name . "-" . $category->name;
+    }
+
+    public function productGridShow($id)
+    {
+        $product = Product::find($id);
+
+        return view("ProductGrid.show", compact("product"));
+    }
+
+    public function productGridWithCategory($category)
+    {
+        $products = Product::join('categories as c', 'products.category_id', '=', 'c.id')
+            ->where('c.nama_kategori', $category)
+            ->get();
+        // dd($products);
+        return view("ProductGrid.index", compact("products"));
+    }
+
+    public function productTable()
+    {
+        $products = Product::all();
+
+        return view("ProductTable.index", compact("products"));
+    }
+
+    public function productTableShow($id)
+    {
+        $product = Product::find($id);
+
+        return view("ProductTable.show", compact("product"));
     }
 }
