@@ -93,3 +93,8 @@ Route::get('/productTable/{productTable}', 'ProductController@productTableShow')
 Route::get('/productGrid', 'ProductController@productGrid')->name('productGrid');
 Route::get('/productGrid/{productTable}', 'ProductController@productGridShow')->name('productGridShow');
 Route::get('/productGrid/withCategory/{category}', 'ProductController@productGridWithCategory')->name('productGridWithCategory');
+
+
+Route::get('/conquer', function () {
+    return view('conquer.index');
+})->name('conquer2');

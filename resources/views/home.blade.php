@@ -62,6 +62,9 @@
         <a href="{{ route('productGrid') }}">
             Products Grid
         </a>
+        <a href="{{ route('conquer2') }}">
+            Template Conquer2
+        </a>
     </div>
 </body>
 
